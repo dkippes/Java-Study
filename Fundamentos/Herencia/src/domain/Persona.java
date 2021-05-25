@@ -6,6 +6,7 @@ public class Persona { // Si no se indica, extiende de la clase Object
     protected int edad;
     protected String direccion;
     
+    // SOBRECARGA DE CONSTRUCTORES
     // Cada constructor que creamos es para poder iniciar de diferente forma
     public Persona() {
         

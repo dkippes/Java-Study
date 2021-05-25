@@ -6,9 +6,18 @@ public class Empleado extends Persona {
     private double sueldo;
     private static int contadorEmpleado;
 
-    public Empleado(String nombre, double sueldo) {
-        super(nombre); // Para poder mandar a llamar al constructor padre
+    // SOBRECARGA DE CONSTRUCTORES -> Mas de un constructor en la clase
+    public Empleado(){
+        // Aca implicitamente llama a super()
         this.idEmpleado = ++Empleado.contadorEmpleado;
+    }
+    
+    
+    public Empleado(String nombre, double sueldo) {
+        // super(nombre); // Para poder mandar a llamar al constructor padre
+        // Con this() llama al constructor interno de la misma clase
+        this(); // Constructore de la clase, no se puede llamar a this() y super() al mismo tiempo
+        this.nombre = nombre;
         this.sueldo = sueldo;
     }
 
